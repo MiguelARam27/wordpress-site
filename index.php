@@ -9,23 +9,7 @@
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/flickity.min.css"/>
     </head>
     <body>
-        <header class="header" id="header">
-            <div class="header__logo" id="header__logo">
-                <a href="#">Miguel Ramirez</a>
-            </div>
-            <ul class="header__menu">
-                <li class="M-link" href="#">
-                    <a href="#">Contact</a>
-                </li>
-                <li class="M-link" href="#">
-                    <a href="#">Resume</a>
-                </li>
-                <li class="M-link" href="#">
-                    <a href="#">about</a>
-                </li>
-
-            </ul>
-        </header>
+    <?php get_header(); ?>
         <div class="projects--container" id="#home">
             <h1 class="projects--container__title u-margin-top-small u-margin-bottom-small">portfolio</h1>
             <div class="projects--container__projects-grid ">
@@ -97,39 +81,8 @@
                     <a class="popup__content__links__button" href=" ">Demo</a>
                 </div>
             </div>
-        </div>
-        <footer class="footer">
-            <div class="social-title u-margin-bottom-medium">
-                <h1>Contact Me</h1>
-            </div>
-            <ul class="social-icons">
-                <li>
-                    <a href="#">
-                        <i aria-hidden="true" class="fa fa-facebook"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i aria-hidden="true" class="fa fa-google"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i aria-hidden="true" class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i aria-hidden="true" class="fa fa-youtube"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i aria-hidden="true" class="fa fa-pinterest"></i>
-                    </a>
-                </li>
-            </ul>
-        </footer>
+        </div> 
+        <?php get_footer(); ?>
     </body>
     <script src="<?php echo get_bloginfo('template_directory');?>/javascript/flickity.js"></script>
      
