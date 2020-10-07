@@ -5,8 +5,8 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
         <title>Document</title>
         <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
-        <link href="main.css" rel="stylesheet"/>
-        <link href="flickity.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/main.css"/>
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/flickity.min.css"/>
     </head>
     <body>
         <header class="header" id="header">
@@ -61,7 +61,6 @@
                     <div class="gallery js-flickity">
                         <div class="gallery-cell">
                             <img alt="" src="https://images.unsplash.com/photo-1593284094481-503ee97959be?ixlib=rb-1.2.1&auto=format&fit=crop&w=2690&q=80">
-                            <!-- <img alt="orange tree" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/orange-tree.jpg"/> -->
                         </div>
                         <div class="gallery-cell">
                             <img alt="" src="assets/example1.png">
@@ -132,5 +131,6 @@
             </ul>
         </footer>
     </body>
-    <script src="flickity-docs.min.js"></script>
+    <script src="<?php echo get_bloginfo('template_directory');?>/javascript/flickity.js"></script>
+     
 </html>
