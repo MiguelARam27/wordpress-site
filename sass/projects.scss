@@ -1,0 +1,161 @@
+//jumbo
+.projects--container {
+  width: 100%;
+  height: auto;
+  background-color: #f4f7fd;
+  position: relative;
+  padding-bottom: 5rem;
+  overflow: hidden;
+
+  &__title {
+    font-size: 5.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+    text-align: center;
+    font-family: $font-family-main;
+    text-transform: uppercase;
+  }
+  &__projects-grid {
+    display: grid;
+    margin: 0 auto;
+    width: 90%;
+    height: auto;
+
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    row-gap: 4rem;
+    column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+
+    .project-card {
+      height: 45rem;
+      width: 45rem;
+      border: 1px solid #d0d0d0;
+      border-radius: 1.5rem;
+      box-shadow: 0px 9px 25px -16px rgba(0, 0, 0, 0.54);
+      background-color: #ececec;
+      transition: all 0.3s ease-in-out;
+      @include respond(phone) {
+        height: 30rem;
+        width: 30rem;
+      }
+
+      overflow: hidden;
+      // transition: background-color 0.4s ease-in;
+
+      &:hover {
+        transform: scale(1.1);
+        background-color: rgba(#057af0, 0.85);
+        overflow: hidden;
+        border-radius: 1.5rem;
+
+        .project-card__info__color2 {
+          position: absolute;
+          background: rgb(#057af0, 0.8);
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          right: 0;
+        }
+        .project-card__info__button {
+          color: #057af0;
+          background-color: white;
+        }
+      }
+
+      &__img {
+        height: 75%;
+        width: 100%;
+        background-image: url('assets/giph-example.gif');
+        position: relative;
+
+        border-top-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+
+        &__title {
+          width: 100%;
+          background: rgba(#000, 0.5);
+          height: 5rem;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-top-right-radius: 0.5rem;
+          border-top-left-radius: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2rem;
+          h1 {
+            color: white;
+            padding: 0.75rem;
+            font-size: 3rem;
+            text-align: center;
+            font-family: $font-family-main;
+          }
+        }
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 25%;
+        position: relative;
+        overflow: hidden;
+
+        &__color1 {
+          content: '';
+          overflow: hidden;
+          position: absolute;
+          background: rgb(#012448, 15%);
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+
+          right: 0;
+          bottom: 0;
+
+          clip-path: polygon(68% 68%, 100% 0%, 100% 100%, 0% 100%);
+        }
+        &__color2 {
+          content: '';
+          overflow: hidden;
+          position: absolute;
+
+          width: 100%;
+          height: 100%;
+          right: -20rem;
+          bottom: -20rem;
+          z-index: 1;
+          clip-path: circle(98.7% at 99% 100%);
+          // clip-path: circle(50% at 50% 20%);
+          border-radius: inherit;
+
+          transition: all 0.3s ease-in-out;
+        }
+
+        &__button {
+          background-color: #057af0;
+          padding: 1rem 1.5rem;
+          border-radius: 0.7rem;
+          // font-family: 'Source Sans Pro', sans-serif;
+          font-family: $font-family-secondary;
+          font-size: 2.4rem;
+          color: $color-white;
+          transition: all 0.3s;
+          z-index: 2;
+          box-shadow: -2px 6px 47px -17px rgba(#fff, 0.75);
+          // &:hover {
+          //   cursor: pointer;
+          //   background-color: rgba(#057af0, 0.75);
+          // }
+          @include respond(phone) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

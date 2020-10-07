@@ -1,0 +1,68 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 7rem;
+  padding: 0 2rem;
+
+  background-color: $color-black;
+  font-family: $font-family-main;
+
+  &__logo {
+    a {
+      font-weight: 700;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-size: 2.9rem;
+      font-family: $font-family-main;
+    }
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // .M-link {
+    //   padding: 1.2rem;
+    // }
+
+    .M-link {
+      padding: 1.4rem;
+
+      @include respond(phone) {
+        display: none;
+      }
+    }
+    .link {
+      padding: 1.2rem;
+      @include respond(phone) {
+        display: none;
+      }
+    }
+    a {
+      display: inline-block;
+      font-weight: 400;
+      padding: 0 2rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-size: 2.2rem;
+    }
+
+    .dropdown {
+      position: relative;
+      a {
+        padding: 1.2rem;
+      }
+      &:hover {
+        .sub-menu {
+          display: block;
+          &:hover {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

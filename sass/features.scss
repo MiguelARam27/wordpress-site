@@ -1,0 +1,59 @@
+.features {
+  height: 60rem;
+  width: 100%;
+  background: url('./assets/friends.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 3rem;
+
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .percent-number {
+      color: white;
+      font-size: 22rem;
+      font-weight: 900;
+      line-height: 1;
+
+      @include respond(phone) {
+        font-size: 18rem;
+      }
+    }
+
+    .title {
+      color: white;
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    a {
+      color: white;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 10px;
+      padding: 0.8rem 1.6rem;
+      border: 2px solid white;
+      margin-top: 0.5rem;
+      display: block;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        background: white;
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,274 @@
+.popup {
+  height: 100vh;
+  background-color: rgba(#000, 0.85);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in;
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  &__close {
+    font-size: 4rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1rem;
+    color: $color-black;
+
+    border-radius: 50%;
+    text-align: center;
+    @include respond(phone) {
+      font-size: 3.2rem;
+    }
+  }
+  &__content {
+    width: 60%;
+    height: 92%;
+
+    padding-bottom: 1.2rem;
+    border-radius: 2rem;
+    position: relative;
+    background-color: #80b2ff;
+    overflow: hidden;
+
+    @include respond(tab-land) {
+      width: 95%;
+    }
+    @include respond(phone) {
+      height: 95%;
+    }
+
+    &__title {
+      text-align: center;
+
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+      padding: 1rem;
+      background-color: $color-main-blue;
+
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-family: $font-family-main;
+        font-size: 4rem;
+        color: $color-white;
+        @include respond(tab-land) {
+          font-size: 5rem;
+          letter-spacing: 1px;
+        }
+        @include respond(phone) {
+          font-size: 3rem;
+        }
+      }
+    }
+    &__gallery-container {
+      //   background-color: green;
+      width: 100%;
+      height: 45%;
+      margin-bottom: 2rem;
+      @include respond(tab-land) {
+        width: 100%;
+        height: 38%;
+        margin-bottom: 1rem;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+        height: 25%;
+        margin-bottom: 1rem;
+      }
+
+      .gallery {
+        // background-color: red;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        @include respond(phone) {
+          width: 100%;
+          height: 100%;
+        }
+        @include respond(tab-land) {
+          width: 100%;
+          height: 100%;
+        }
+
+        .gallery-cell {
+          height: 100%;
+          width: 100%;
+          img {
+            object-fit: cover;
+            object-position: center;
+            height: auto;
+            width: 100%;
+            height: 100%;
+            @include respond(phone) {
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+    &__info {
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    &__skills {
+      margin-top: 0.5rem;
+      h1 {
+        text-align: center;
+        font-family: $font-family-main;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        @include respond(tab-land) {
+          font-size: 2.4rem;
+          letter-spacing: 1px;
+        }
+        @include respond(phone) {
+          font-size: 1.7rem;
+          letter-spacing: 1px;
+        }
+      }
+      &__skills-container {
+        display: grid;
+
+        grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+        align-items: center;
+        justify-items: center;
+        row-gap: 1.4rem;
+
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &__skill {
+          background-color: #267dff;
+          height: 8rem;
+          width: 8rem;
+          border-radius: 50%;
+          text-transform: uppercase;
+          font-size: 1.5rem;
+          color: $color-white;
+          font-family: $font-family-secondary;
+          text-align: center;
+          line-height: 8rem;
+
+          @include respond(tab-land) {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+          }
+          @include respond(phone) {
+            font-size: 0.8rem;
+            height: 5rem;
+            width: 5rem;
+            line-height: 4rem;
+          }
+        }
+      }
+    }
+
+    &__links {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #80b2ff;
+
+      &__button {
+        background-color: #267dff;
+        padding: 1rem 1.5rem;
+        border-radius: 0.7rem;
+        // font-family: 'Source Sans Pro', sans-serif;
+        font-family: $font-family-secondary;
+        font-size: 2.4rem;
+        color: $color-white;
+        z-index: 2;
+        box-shadow: -2px 6px 47px -17px rgba(#fff, 1);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.8rem #0d6eff;
+        position: relative;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0.5rem #0d6eff;
+          top: 0.5rem;
+        }
+        &:active {
+          box-shadow: none;
+          top: 0.8rem;
+        }
+
+        @include respond(phone) {
+          padding: 1rem 1.2rem;
+          border-radius: 0.7rem;
+          font-size: 1.7rem;
+        }
+      }
+    }
+    &__info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
+      height: auto;
+
+      column-gap: 1rem;
+      margin-bottom: 1rem;
+
+      &__column {
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        background-color: $color-main-blue;
+        background-color: #ececec;
+        box-shadow: 0.1rem 0.2rem 1px 1px #a0a0a0;
+
+        @include respond(phone) {
+          padding: 0.6rem 0.8rem;
+        }
+        @include respond(tab-land) {
+          padding: 1rem 1.2rem;
+        }
+
+        h2 {
+          font-size: 2.5rem;
+          font-family: $font-family-main;
+          font-weight: 700;
+          text-align: center;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          @include respond(tab-land) {
+            font-size: 2.2rem;
+          }
+          @include respond(phone) {
+            font-size: 1.2rem;
+          }
+        }
+        p {
+          margin-top: 0.5rem;
+          font-size: 1.4rem;
+          color: $color-white;
+          color: black;
+          letter-spacing: 1px;
+          font-family: $font-family-secondary;
+          hyphens: auto;
+          @include respond(tab-land) {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+          }
+          @include respond(phone) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+}
