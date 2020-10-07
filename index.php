@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>Document</title>
-        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/main.css"/>
-        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/flickity.min.css"/>
-    </head>
-    <body>
+
     <?php get_header(); ?>
         <div class="projects--container" id="#home">
             <h1 class="projects--container__title u-margin-top-small u-margin-bottom-small">portfolio</h1>
@@ -83,7 +73,4 @@
             </div>
         </div> 
         <?php get_footer(); ?>
-    </body>
-    <script src="<?php echo get_bloginfo('template_directory');?>/javascript/flickity.js"></script>
-     
-</html>
+   

@@ -30,3 +30,7 @@
         </li>
     </ul>
 </footer>
+</body>
+    <script src="<?php echo get_bloginfo('template_directory');?>/javascript/flickity.js"></script>
+     
+</html>
