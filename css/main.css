@@ -298,10 +298,14 @@ body {
 .projects--container__projects-grid .project-card__img {
   height: 75%;
   width: 100%;
-  background-image: url("assets/giph-example.gif");
   position: relative;
   border-top-right-radius: 1.5rem;
   border-top-left-radius: 1.5rem;
+}
+.projects--container__projects-grid .project-card__img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .projects--container__projects-grid .project-card__img__title {
   width: 100%;

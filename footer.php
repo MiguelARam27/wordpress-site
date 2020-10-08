@@ -30,6 +30,7 @@
         </li>
     </ul>
 </footer>
+    <?php wp_footer();?>
 </body>
     <script src="<?php echo get_bloginfo('template_directory');?>/javascript/flickity.js"></script>
      

@@ -8,8 +8,9 @@
         <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" rel="stylesheet"/>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/main.css"/>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory');?>/css/flickity.min.css"/>
+        <?php wp_head();?>
     </head>
-    <body>
+    <body <?php body_class();?>>
 <header class="header" id="header">
     <div class="header__logo" id="header__logo">
         <a href="#">Miguel Ramirez</a>
