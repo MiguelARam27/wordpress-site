@@ -725,11 +725,7 @@ footer .social-icons a:hover {
   }
 }
 .popup__content__skills__skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-  align-items: center;
-  justify-items: center;
-  row-gap: 1.4rem;
+  display: flex;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
