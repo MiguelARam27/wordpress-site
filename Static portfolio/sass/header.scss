@@ -3,13 +3,22 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 7rem;
+  min-height: 7vh;
   padding: 0 2rem;
+  position: relative;
 
   background-color: $color-black;
   font-family: $font-family-main;
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__logo {
+    @include respond(phone) {
+      align-self: flex-start;
+    }
+
     a {
       font-weight: 700;
       text-transform: uppercase;
@@ -23,6 +32,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include respond(phone) {
+      display: none;
+    }
     // .M-link {
     //   padding: 1.2rem;
     // }
@@ -30,15 +42,15 @@
     .M-link {
       padding: 1.4rem;
 
-      @include respond(phone) {
-        display: none;
-      }
+      // @include respond(phone) {
+      //   display: none;
+      // }
     }
     .link {
       padding: 1.2rem;
-      @include respond(phone) {
-        display: none;
-      }
+      // @include respond(phone) {
+      //   display: none;
+      // }
     }
     a {
       display: inline-block;
@@ -65,4 +77,37 @@
       }
     }
   }
+
+  &__togglebutton {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3rem;
+    height: 2.1rem;
+    @include respond(phone) {
+      display: flex;
+      top: 50%;
+      right: 5%;
+      transform: translate(5%, -50%);
+    }
+
+    .bar {
+      height: 0.3rem;
+      width: 100%;
+      background-color: white;
+      border-radius: 1rem;
+      @include respond(phone) {
+      }
+    }
+  }
+}
+
+.active {
+  display: flex;
+  flex-flow: column;
+  justify-items: center;
+  align-content: center;
 }
