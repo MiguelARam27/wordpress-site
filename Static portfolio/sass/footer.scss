@@ -35,8 +35,10 @@ footer {
 
       &:hover {
         cursor: pointer;
-        color: $color-white;
+        color: $color-second-blue;
         background: black;
+        border: 1px solid $color-second-blue;
+        box-shadow: 0px 20px 25px -16px $color-second-blue;
       }
     }
   }

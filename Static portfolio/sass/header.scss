@@ -60,6 +60,10 @@
       text-decoration: none;
       color: white;
       font-size: 2.2rem;
+      transition: all 0.3s ease;
+      &:hover {
+        border-bottom: 0.3rem solid #0067f4;
+      }
     }
 
     .dropdown {
@@ -110,4 +114,10 @@
   flex-flow: column;
   justify-items: center;
   align-content: center;
+}
+
+.active-mobile {
+  top: 5%;
+  right: 5%;
+  transform: translate(5%, -5%);
 }

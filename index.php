@@ -31,10 +31,7 @@
             </div>
         </div>
         <?php endwhile;?>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
-        <div class="project-card"></div>
+  
     </div>
 </div>
 <?php

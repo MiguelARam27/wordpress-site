@@ -39,6 +39,7 @@
     border-radius: 2rem;
     position: relative;
     background-color: #80b2ff;
+    background-color: $color-second-blue;
     overflow-y: auto;
     &::-webkit-scrollbar {
       display: none;
@@ -155,15 +156,15 @@
 
         &__skill {
           background-color: #267dff;
-          height: 8rem;
-          width: 8rem;
+          height: 9rem;
+          width: 9rem;
           border-radius: 50%;
           text-transform: uppercase;
-          font-size: 1.5rem;
+          font-size: 1.27rem;
           color: $color-white;
           font-family: $font-family-secondary;
           text-align: center;
-          line-height: 8rem;
+          line-height: 9rem;
 
           @include respond(tab-land) {
             font-size: 1.4rem;
@@ -185,9 +186,11 @@
       align-items: center;
       justify-content: space-evenly;
       background-color: #80b2ff;
+      background-color: $color-second-blue;
 
       &__button {
         background-color: #267dff;
+
         padding: 1rem 1.5rem;
         border-radius: 0.7rem;
         // font-family: 'Source Sans Pro', sans-serif;
