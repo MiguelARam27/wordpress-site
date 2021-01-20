@@ -4,7 +4,7 @@
 //   contain: true,
 // });
 
-var flkty = new Flickity('.main-gallery', {
+var flkty = new Flickity('.js-flickity', {
   // options
   cellAlign: 'left',
   contain: true,

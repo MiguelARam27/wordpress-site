@@ -32,13 +32,13 @@
     ?>
     
                <ul class="header__menu">
-               <li class="M-link" href="#">
+               <li class="M-link">
                    <a href="<?php echo $contact?>">Contact</a>
                </li>
-               <li class="M-link" href="#">
+               <li class="M-link">
                    <a href="<?php echo $resume?>">Resume</a>
                </li>
-               <li class="M-link" href="#">
+               <li class="M-link">
                    <a href="#">about</a>
                </li>
            </ul>
