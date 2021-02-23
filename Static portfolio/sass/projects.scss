@@ -171,7 +171,8 @@
 
 .projects {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
   background-color: #f4f7fd;
   position: relative;
   padding-bottom: 5rem;
@@ -262,9 +263,11 @@
             width: 90%;
           }
           &__paragraph {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $color-grey;
             font-weight: 500;
+            font-family: $font-family-secondary;
+            width: 90%;
           }
         }
       }
@@ -306,6 +309,7 @@
           font-weight: bold;
           color: $color-white;
           font-size: 1.75rem;
+          font-family: $font-family-secondary;
         }
 
         &__buttons {
@@ -315,7 +319,6 @@
           width: 100%;
 
           a {
-            background-color: #071ce8;
             background-color: $color-white;
 
             padding: 1rem 1.5rem;
@@ -324,13 +327,24 @@
             font-family: $font-family-secondary;
             font-size: 2.4rem;
             color: $color-white;
-            color: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+
             background: -webkit-linear-gradient(#eee, #fff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             transition: all 0.3s;
             z-index: 2;
-            box-shadow: -2px 6px 47px -17px rgba(#fff, 0.75);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0.2rem rgba(#000, 0.55);
+
+            &:hover {
+              transform: scale(1.05);
+              box-shadow: 0 0.2rem rgba(#000, 0.55);
+              top: 0.2rem;
+            }
+            &:active {
+              box-shadow: none;
+              top: 0.8rem;
+            }
           }
         }
       }

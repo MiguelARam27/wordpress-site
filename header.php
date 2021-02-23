@@ -31,15 +31,12 @@
         $contact = $mypod->field('contact');     
     ?>
     
-               <ul class="header__menu">
+            <ul class="header__menu">
                <li class="M-link">
                    <a href="<?php echo $contact?>">Contact</a>
                </li>
                <li class="M-link">
                    <a href="<?php echo $resume?>">Resume</a>
-               </li>
-               <li class="M-link">
-                   <a href="#">about</a>
                </li>
            </ul>
             

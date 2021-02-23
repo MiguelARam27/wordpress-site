@@ -15,8 +15,25 @@ $color-react: #61dbfb;
   //   background-image: linear-gradient(270deg, #071ce8 0%, #0296f5 100%);
 
   background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
 
-  &:hover {
-    transform: scale(1.21);
-  }
+.background-red {
+  background-color: #ec7516;
+  background-image: linear-gradient(90deg, #ec7516 0%, #ff0000 100%);
+}
+.background-purple {
+  background-color: #843cff;
+  background-image: linear-gradient(90deg, #843cff 0%, #784ba0 100%);
+}
+
+.background-gold {
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #ffc904 100%);
+
+  background-color: #ffcc00;
+  background-image: linear-gradient(0deg, #ffcc00 0%, #d8a613 100%);
+}
+.background-green {
+  background-color: #00a1e9;
+  background-image: linear-gradient(90deg, #00a1e9 0%, #80d0c7 100%);
 }

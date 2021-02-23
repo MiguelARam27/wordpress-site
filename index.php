@@ -135,9 +135,10 @@
     $background = $mypod->field('background');
     $background2 =$mypod->field('background2');
     $content = $mypod->field('content');
+    $background_color = $mypod->field('card_background'); 
 ?>
 <div class="popup" id ="<?php echo $id?>">
-    <div class="popup__content">
+    <div class="popup__content <?php echo $background_color?>">
         <a class="popup__close" href="#home">&times;</a>
         <div class="popup__content__title ">
             <h1><?php echo $name?></h1>

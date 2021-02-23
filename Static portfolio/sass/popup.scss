@@ -38,8 +38,7 @@
     padding-bottom: 1.2rem;
     border-radius: 2rem;
     position: relative;
-    background-color: #80b2ff;
-    background-color: $color-second-blue;
+
     overflow-y: auto;
     &::-webkit-scrollbar {
       display: none;
@@ -58,7 +57,6 @@
       border-top-left-radius: 2rem;
       border-top-right-radius: 2rem;
       padding: 1rem;
-      background-color: $color-main-blue;
 
       h1 {
         text-transform: uppercase;
@@ -155,7 +153,6 @@
         padding-bottom: 1rem;
 
         &__skill {
-          background-color: #267dff;
           height: 9rem;
           width: 9rem;
           border-radius: 50%;
@@ -180,60 +177,22 @@
       }
     }
 
-    &__links {
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      background-color: #80b2ff;
-      background-color: $color-second-blue;
-
-      &__button {
-        background-color: #267dff;
-
-        padding: 1rem 1.5rem;
-        border-radius: 0.7rem;
-        // font-family: 'Source Sans Pro', sans-serif;
-        font-family: $font-family-secondary;
-        font-size: 2.4rem;
-        color: $color-white;
-        z-index: 2;
-        box-shadow: -2px 6px 47px -17px rgba(#fff, 1);
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 0.8rem #0d6eff;
-        position: relative;
-        &:hover {
-          transform: scale(1.05);
-          box-shadow: 0 0.5rem #0d6eff;
-          top: 0.5rem;
-        }
-        &:active {
-          box-shadow: none;
-          top: 0.8rem;
-        }
-
-        @include respond(phone) {
-          padding: 1rem 1.2rem;
-          border-radius: 0.7rem;
-          font-size: 1.7rem;
-        }
-      }
-    }
     &__info {
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 100%;
+      min-height: 25%;
       height: auto;
 
       column-gap: 1rem;
       margin-bottom: 1rem;
 
       &__column {
-        padding: 1rem 2rem;
+        padding: 2rem 2rem;
         border-radius: 1rem;
-        background-color: $color-main-blue;
+
         background-color: #ececec;
-        box-shadow: 0.1rem 0.2rem 1px 1px #a0a0a0;
+        box-shadow: 0px 9px 25px -16px rgba(0, 0, 0, 0.54);
 
         @include respond(phone) {
           padding: 0.6rem 0.8rem;
@@ -261,7 +220,7 @@
           font-size: 1.4rem;
           color: $color-white;
           color: black;
-          letter-spacing: 1px;
+          letter-spacing: 1.5px;
           font-family: $font-family-secondary;
           hyphens: auto;
           @include respond(tab-land) {
@@ -271,6 +230,42 @@
           @include respond(phone) {
             font-size: 0.8rem;
           }
+        }
+      }
+    }
+
+    &__links {
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+
+      &__button {
+        padding: 1rem 1.5rem;
+        border-radius: 0.7rem;
+        // font-family: 'Source Sans Pro', sans-serif;
+        font-family: $font-family-secondary;
+        font-size: 2.4rem;
+        color: $color-white;
+        z-index: 2;
+        box-shadow: -2px 6px 47px -17px rgba(#fff, 1);
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0.2rem rgba(#000, 0.55);
+        position: relative;
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0.2rem rgba(#000, 0.55);
+          top: 0.2rem;
+        }
+        &:active {
+          box-shadow: none;
+          top: 0.8rem;
+        }
+
+        @include respond(phone) {
+          padding: 1rem 1.2rem;
+          border-radius: 0.7rem;
+          font-size: 1.7rem;
         }
       }
     }
