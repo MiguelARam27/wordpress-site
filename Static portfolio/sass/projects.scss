@@ -22,15 +22,15 @@
     margin: 0 auto;
     width: 90%;
     height: auto;
+    row-gap: 4rem;
+    column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
 
     grid-template-columns: repeat(auto-fit, minmax(65rem, 1fr));
     @include respond(phone) {
       grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     }
-    row-gap: 4rem;
-    column-gap: 2rem;
-    justify-items: center;
-    align-items: center;
 
     .project-card {
       height: 55rem;
@@ -71,7 +71,7 @@
       &__img {
         height: 75%;
         width: 100%;
-        // background-image: url('assets/knightfinder.gif');
+
         position: relative;
 
         border-top-right-radius: 1.5rem;
@@ -99,6 +99,9 @@
             font-size: 3rem;
             text-align: center;
             font-family: $font-family-main;
+            @include respond(phone) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -159,6 +162,175 @@
           // }
           @include respond(phone) {
             font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f7fd;
+  position: relative;
+  padding-bottom: 5rem;
+  overflow: hidden;
+
+  &__title {
+    font-size: 5.2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: black;
+    text-align: center;
+    font-family: $font-family-main;
+    text-transform: uppercase;
+  }
+  &__grid {
+    display: grid;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+
+    row-gap: 4rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+    @include respond(phone) {
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+      width: 100%;
+    }
+  }
+  &__card {
+    height: 55rem;
+    width: 70rem;
+    border: 1px solid #d0d0d0;
+    border-radius: 1.5rem;
+
+    background-color: $color-white;
+    transition: all 0.3s ease-in-out;
+    padding: 1.2rem 1.2rem;
+    display: flex;
+    align-items: flex-start;
+
+    @include respond(phone) {
+      height: 35rem;
+      width: 35rem;
+      flex-flow: column;
+    }
+
+    &__info {
+      flex: 40%;
+      padding: 0 0.5rem;
+      height: 100%;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      &__title {
+        font-size: 1.8rem;
+        color: #808080;
+        text-transform: capitalize;
+        letter-spacing: 0.05rem;
+        margin-bottom: 2rem;
+      }
+
+      &__tech {
+        display: flex;
+        margin-bottom: 2.2rem;
+
+        &__icon {
+          flex: 10%;
+          font-size: 3.3rem;
+          text-align: left;
+        }
+
+        &__info {
+          flex: 70%;
+
+          &__title {
+            font-size: 2.2rem;
+            color: $color-black;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+          }
+          &__bar {
+            height: 0.4rem;
+
+            margin-bottom: 0.5rem;
+            width: 90%;
+          }
+          &__paragraph {
+            font-size: 1.2rem;
+            color: $color-grey;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    &__summary {
+      flex: 60%;
+      border-radius: 0.7rem 0.7rem;
+      height: 100%;
+      overflow: hidden;
+      box-shadow: 0px 9px 25px -16px rgba(0, 0, 0, 0.54);
+
+      &__img {
+        height: 60%;
+        display: block;
+        box-sizing: border-box;
+        overflow: hidden;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &__info {
+        display: flex;
+        align-items: center;
+        flex-flow: column;
+        justify-content: space-around;
+        height: 40%;
+        padding: 0 0.9rem;
+        &__title {
+          color: white;
+          font-size: 3.3rem;
+          font-weight: bolder;
+          font-family: 'PT Sans', sans-serif;
+        }
+        &__paragraph {
+          font-weight: bold;
+          color: $color-white;
+          font-size: 1.75rem;
+        }
+
+        &__buttons {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          width: 100%;
+
+          a {
+            background-color: #071ce8;
+            background-color: $color-white;
+
+            padding: 1rem 1.5rem;
+            border-radius: 0.7rem;
+            // font-family: 'Source Sans Pro', sans-serif;
+            font-family: $font-family-secondary;
+            font-size: 2.4rem;
+            color: $color-white;
+            color: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            background: -webkit-linear-gradient(#eee, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s;
+            z-index: 2;
+            box-shadow: -2px 6px 47px -17px rgba(#fff, 0.75);
           }
         }
       }

@@ -1,6 +1,5 @@
 let galleryTimeline = gsap.timeline({ paused: true });
 
-console.log(galleryTimeline);
 //   Product animation
 galleryTimeline.fromTo(
   '.project-card',

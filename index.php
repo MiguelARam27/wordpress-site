@@ -34,6 +34,93 @@
   
     </div>
 </div>
+<div class="projects">
+        <h1 class="projects__title u-margin-top-small u-margin-bottom-small">portfolio</h1>
+        <div class="projects__grid ">
+
+        <?php
+            $mypod = pods('project');
+            $mypod->find('name ASC');
+        ?>
+        <?php while ( $mypod->fetch()):?>
+        <?php 
+            $name = $mypod->field('name'); 
+            $id = $mypod->field('project-id');     
+            $link_code = $mypod->field('link-code');     
+            $link_demo = $mypod->field('link-demo');
+            $gif = $mypod->field('card-cover'); 
+            $content = $mypod->field('content');   
+            $background_color = $mypod->field('card_background'); 
+        ?>
+            <div class="projects__card">
+                <div class="projects__card__info">
+                    <h3 class="projects__card__info__title">
+                        Tech Info
+                    </h3>
+                    <?php echo $content?>
+                    <?php
+                        $max_slides = 8; // this should be the maximum number of skills
+
+                        for ($i=1; $i<=$max_slides; $i++) { 
+                            
+                            $key = 'skill' . $i; 
+                            $key2= 'info' . $i;
+                            $skill = $mypod->field($key);
+                            $info = $mypod->field($key2);
+                            //check for skill
+                            if($skill and $second ) { ?>
+                                <div class="projects__card__info__tech">
+                                    <div class="projects__card__info__tech__icon">
+                                        <i class="fab fa-<?php echo $skill?>"></i>
+                                    </div>
+
+                                    <div class="projects__card__info__tech__info">
+                                        <h3 class="projects__card__info__tech__info__title"><?php echo $skill?></h3>
+                                        <hr class="projects__card__info__tech__info__bar">
+                                        <p class="projects__card__info__tech__info__paragraph">
+                                            <?php echo $info?>
+                                    </div>
+                                </div>
+                        
+                            <?php } // end if statement
+                        } 
+                    ?>
+                    
+                    <div class="projects__card__info__tech">
+                        <div class="projects__card__info__tech__icon">
+                            <i class="fab fa-react "></i>
+                        </div>
+
+                        <div class="projects__card__info__tech__info">
+                            <h3 class="projects__card__info__tech__info__title">React</h3>
+                            <hr class="projects__card__info__tech__info__bar <?php echo $background_color ?>">
+                            <p class="projects__card__info__tech__info__paragraph">
+                                React is the most popular UI library that allows dev. Build great UI and fast app…
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__card__summary <?php echo $background_color?>">
+                    <div class="projects__card__summary__img">
+                        <img src="<?php echo $gif?>"> alt="image">
+                    </div>
+                    <div class="projects__card__summary__info">
+                        <h2 class="projects__card__summary__info__title"><?php echo $name ?></h2>
+                        <p class="projects__card__summary__info__paragraph">
+                            Doctorgrillz is a USA company, which make Grillz for celebrities and others, they make
+                            grills that fit in your mouth, you can build your own grill directly on the site, you can
+                            choose your metal, your gems, your style, t...
+                        </p>
+                        <p class="projects__card__summary__info__buttons">
+                            <a class="project-card__info__button" href="#<?php echo $id?>">Learn more</a>
+                            <a class="project-card__info__button" href="<?php echo $link_code?>">Code</a>
+                            <a class="project-card__info__button" href="<?php echo $link_demo?>">Demo</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <?php endwhile;?>
+        </div>
+    </div>
 <?php
     $mypod = pods('project');
     $mypod->find('name ASC');

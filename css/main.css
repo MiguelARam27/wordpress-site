@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;1,600&display=swap');
+.background-blue {
+  background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+.background-blue:hover {
+  transform: scale(1.21);
+}
+
 html,
 body,
 div,
@@ -298,11 +305,11 @@ body {
   margin: 0 auto;
   width: 90%;
   height: auto;
-  grid-template-columns: repeat(auto-fit, minmax(65rem, 1fr));
   row-gap: 4rem;
   column-gap: 2rem;
   justify-items: center;
   align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(65rem, 1fr));
 }
 @media only screen and (max-width: 37.5em) {
   .projects--container__projects-grid {
@@ -378,6 +385,11 @@ body {
   text-align: center;
   font-family: 'PT Sans', sans-serif;
 }
+@media only screen and (max-width: 37.5em) {
+  .projects--container__projects-grid .project-card__img__title h1 {
+    font-size: 2rem;
+  }
+}
 .projects--container__projects-grid .project-card__info {
   display: flex;
   justify-content: space-evenly;
@@ -426,6 +438,161 @@ body {
   .projects--container__projects-grid .project-card__info__button {
     font-size: 1.5rem;
   }
+}
+
+.projects {
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f7fd;
+  position: relative;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+.projects__title {
+  font-size: 5.2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: black;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  text-transform: uppercase;
+}
+.projects__grid {
+  display: grid;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  row-gap: 4rem;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(70rem, 1fr));
+}
+@media only screen and (max-width: 37.5em) {
+  .projects__grid {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    width: 100%;
+  }
+}
+.projects__card {
+  height: 55rem;
+  width: 70rem;
+  border: 1px solid #d0d0d0;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  padding: 1.2rem 1.2rem;
+  display: flex;
+  align-items: flex-start;
+}
+@media only screen and (max-width: 37.5em) {
+  .projects__card {
+    height: 35rem;
+    width: 35rem;
+    flex-flow: column;
+  }
+}
+.projects__card__info {
+  flex: 40%;
+  padding: 0 0.5rem;
+  height: 100%;
+  overflow: auto;
+}
+.projects__card__info::-webkit-scrollbar {
+  display: none;
+}
+.projects__card__info__title {
+  font-size: 1.8rem;
+  color: #808080;
+  text-transform: capitalize;
+  letter-spacing: 0.05rem;
+  margin-bottom: 2rem;
+}
+.projects__card__info__tech {
+  display: flex;
+  margin-bottom: 2.2rem;
+}
+.projects__card__info__tech__icon {
+  flex: 10%;
+  font-size: 3.3rem;
+  text-align: left;
+}
+.projects__card__info__tech__info {
+  flex: 70%;
+}
+.projects__card__info__tech__info__title {
+  font-size: 2.2rem;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.projects__card__info__tech__info__bar {
+  height: 0.4rem;
+  margin-bottom: 0.5rem;
+  width: 90%;
+}
+.projects__card__info__tech__info__paragraph {
+  font-size: 1.2rem;
+  color: #808080;
+  font-weight: 500;
+}
+.projects__card__summary {
+  flex: 60%;
+  border-radius: 0.7rem 0.7rem;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 9px 25px -16px rgba(0, 0, 0, 0.54);
+}
+.projects__card__summary__img {
+  height: 60%;
+  display: block;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.projects__card__summary__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.projects__card__summary__info {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: space-around;
+  height: 40%;
+  padding: 0 0.9rem;
+}
+.projects__card__summary__info__title {
+  color: white;
+  font-size: 3.3rem;
+  font-weight: bolder;
+  font-family: 'PT Sans', sans-serif;
+}
+.projects__card__summary__info__paragraph {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.75rem;
+}
+.projects__card__summary__info__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+.projects__card__summary__info__buttons a {
+  background-color: #071ce8;
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.7rem;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.4rem;
+  color: #fff;
+  color: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+  background: -webkit-linear-gradient(#eee, #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s;
+  z-index: 2;
+  box-shadow: -2px 6px 47px -17px rgba(255, 255, 255, 0.75);
 }
 
 .collections2 {
