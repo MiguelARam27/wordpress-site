@@ -190,9 +190,11 @@
   &__grid {
     display: grid;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     height: auto;
 
+    column-gap: 0.1rem;
+    padding: 2.4rem 0;
     row-gap: 4rem;
     justify-items: center;
     align-items: center;
@@ -205,6 +207,7 @@
   &__card {
     height: 55rem;
     width: 70rem;
+
     border: 1px solid #d0d0d0;
     border-radius: 1.5rem;
 
@@ -215,9 +218,11 @@
     align-items: flex-start;
 
     @include respond(phone) {
-      height: 35rem;
-      width: 35rem;
+      height: 90rem;
+      width: 90%;
       flex-flow: column;
+      justify-content: space-between;
+      flex-direction: column-reverse;
     }
 
     &__info {
@@ -225,6 +230,9 @@
       padding: 0 0.5rem;
       height: 100%;
       overflow: auto;
+      @include respond(phone) {
+        margin-top: 2rem;
+      }
       &::-webkit-scrollbar {
         display: none;
       }
@@ -245,6 +253,9 @@
           flex: 10%;
           font-size: 3.3rem;
           text-align: left;
+          @include respond(phone) {
+            text-align: center;
+          }
         }
 
         &__info {
@@ -255,6 +266,7 @@
             color: $color-black;
             font-weight: 700;
             margin-bottom: 0.5rem;
+            text-transform: capitalize;
           }
           &__bar {
             height: 0.4rem;
@@ -268,6 +280,9 @@
             font-weight: 500;
             font-family: $font-family-secondary;
             width: 90%;
+            @include respond(phone) {
+              font-size: 1.45rem;
+            }
           }
         }
       }
@@ -304,12 +319,18 @@
           font-size: 3.3rem;
           font-weight: bolder;
           font-family: 'PT Sans', sans-serif;
+          @include respond(phone) {
+            font-size: 2.4rem;
+          }
         }
         &__paragraph {
           font-weight: bold;
           color: $color-white;
           font-size: 1.75rem;
           font-family: $font-family-secondary;
+          @include respond(phone) {
+            font-size: 1.6rem;
+          }
         }
 
         &__buttons {
@@ -335,6 +356,9 @@
             z-index: 2;
             transition: all 0.3s ease-in-out;
             box-shadow: 0 0.2rem rgba(#000, 0.55);
+            @include respond(phone) {
+              font-size: 1.9rem;
+            }
 
             &:hover {
               transform: scale(1.05);

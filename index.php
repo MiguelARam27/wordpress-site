@@ -68,7 +68,7 @@
                             $skill = $mypod->field($key);
                             $info = $mypod->field($key2);
                             //check for skill
-                            if($skill and $second ) { ?>
+                            if($skill and $info) { ?>
                                 <div class="projects__card__info__tech">
                                     <div class="projects__card__info__tech__icon">
                                         <i class="fab fa-<?php echo $skill?>"></i>
@@ -85,7 +85,7 @@
                             <?php } // end if statement
                         } 
                     ?>
-                    
+<!--                     
                     <div class="projects__card__info__tech">
                         <div class="projects__card__info__tech__icon">
                             <i class="fab fa-react "></i>
@@ -97,7 +97,7 @@
                             <p class="projects__card__info__tech__info__paragraph">
                                 React is the most popular UI library that allows dev. Build great UI and fast app…
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="projects__card__summary <?php echo $background_color?>">
                     <div class="projects__card__summary__img">

@@ -127,55 +127,6 @@
       padding-right: 1rem;
       padding-left: 1rem;
     }
-    &__skills {
-      margin-top: 0.5rem;
-      h1 {
-        text-align: center;
-        font-family: $font-family-main;
-        font-size: 1.8rem;
-        text-transform: uppercase;
-        @include respond(phone) {
-          font-size: 1.7rem;
-          letter-spacing: 1px;
-        }
-        @include respond(tab-land) {
-          font-size: 2.4rem;
-          letter-spacing: 1px;
-        }
-      }
-      &__skills-container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        flex-wrap: wrap;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
-        &__skill {
-          height: 9rem;
-          width: 9rem;
-          border-radius: 50%;
-          text-transform: uppercase;
-          font-size: 1.27rem;
-          color: $color-white;
-          font-family: $font-family-secondary;
-          text-align: center;
-          line-height: 9rem;
-
-          @include respond(tab-land) {
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-          }
-          @include respond(phone) {
-            font-size: 0.8rem;
-            height: 5rem;
-            width: 5rem;
-            line-height: 4rem;
-          }
-        }
-      }
-    }
 
     &__info {
       display: grid;
@@ -229,6 +180,56 @@
           }
           @include respond(phone) {
             font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    &__skills {
+      margin-top: 1.5rem;
+
+      &__title {
+        text-align: center;
+        font-family: $font-family-main;
+
+        font-size: 2.9rem;
+        text-transform: uppercase;
+        @include respond(phone) {
+          font-size: 1.7rem;
+          letter-spacing: 1px;
+        }
+        @include respond(tab-land) {
+          font-size: 2.4rem;
+          letter-spacing: 1px;
+        }
+      }
+      &__skills-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &__skill {
+          height: 9rem;
+          width: 9rem;
+          border-radius: 50%;
+          text-transform: uppercase;
+          font-size: 1.27rem;
+          color: $color-white;
+          font-family: $font-family-secondary;
+          text-align: center;
+          line-height: 9rem;
+
+          @include respond(tab-land) {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+          }
+          @include respond(phone) {
+            font-size: 0.8rem;
+            height: 5rem;
+            width: 5rem;
+            line-height: 4rem;
           }
         }
       }
