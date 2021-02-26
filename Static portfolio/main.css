@@ -644,7 +644,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .projects__card__summary__info__buttons a {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 }
 .projects__card__summary__info__buttons a:hover {
@@ -1078,6 +1078,9 @@ footer .social-icons a:hover {
   flex-wrap: wrap;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.popup__content__skills__skills-container__title {
+  text-align: center;
 }
 .popup__content__skills__skills-container__skill {
   height: 9rem;

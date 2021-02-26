@@ -480,8 +480,10 @@ body {
 .projects__grid {
   display: grid;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   height: auto;
+  column-gap: 0.1rem;
+  padding: 2.4rem 0;
   row-gap: 4rem;
   justify-items: center;
   align-items: center;
@@ -646,7 +648,7 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .projects__card__summary__info__buttons a {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 }
 .projects__card__summary__info__buttons a:hover {
@@ -1080,6 +1082,9 @@ footer .social-icons a:hover {
   flex-wrap: wrap;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+.popup__content__skills__skills-container__title {
+  text-align: center;
 }
 .popup__content__skills__skills-container__skill {
   height: 9rem;
